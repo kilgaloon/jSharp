@@ -1,6 +1,6 @@
 	// url object
 
-if(window.Ravel.isLoaded) {
+if(window.jsharp.isLoaded) {
 
 	_url = {
 		get: function( get_var ) {
