@@ -4,7 +4,7 @@ select = function( element ) {
 
 
 	// initialize ravel
-	if(window.Ravel.isLoaded) {
+	if(window.jsharp.isLoaded) {
 		console.log("Processing..."); 
 
 		return new init( element );
@@ -46,7 +46,7 @@ var init = function( element ) {
 
 	}
 	
-}; ravel = init; window.Ravel = { isLoaded: true, version: 0.5 }; 
+}; j# = init; window.jsharp = { isLoaded: true, version: 0.5 }; 
 
 
 
