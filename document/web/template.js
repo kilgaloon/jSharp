@@ -1,7 +1,7 @@
 
 var template = [];
 
-// template object 123
+// template object
 if(window.Ravel.isLoaded) {
 
 
