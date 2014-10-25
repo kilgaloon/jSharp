@@ -2,7 +2,7 @@
 var template = [];
 
 // template object
-if(window.Ravel.isLoaded) {
+if(window.jsharp.isLoaded) {
 
 
 	var _TEMPLATE = function( url ) {
