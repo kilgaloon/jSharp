@@ -1,6 +1,6 @@
 	// system object
 
-if(window.Ravel.isLoaded) {
+if(window.jsharp.isLoaded) {
 
 	sys = {
 
