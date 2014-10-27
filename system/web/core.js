@@ -46,7 +46,7 @@ var init = function( element ) {
 
 	}
 	
-}; j# = init; window.jsharp = { isLoaded: true, version: 0.5 }; 
+}; jsharp = init; window.jsharp = { isLoaded: true, version: 0.5 }; 
 
 
 
@@ -121,10 +121,10 @@ var document = window.document,
 
 
 	// plugin call
-	plug = ravel.prototype || init.prototype;
+	plug = jsharp.prototype || init.prototype;
 
 	// array of defined variables that are available in global scope
-	window.Ravel.defined = [];
+	window.jsharp.defined = [];
 
 
 

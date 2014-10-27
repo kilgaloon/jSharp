@@ -68,7 +68,7 @@ function pull( var_name ) {
 
 
 // store all ravel informations in " info " variable
-info = window.Ravel;
+info = window.jsharp;
 
 
 } else {
