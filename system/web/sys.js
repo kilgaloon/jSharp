@@ -31,17 +31,17 @@ if(window.jsharp.isLoaded) {
 			protocol: window.location.protocol,
 		},			
 
-		// printing results into console log
-		log: function( log ) {
-			console.log(log);
-		},
-
 		lang: window.navigator.language,
 		os: window.navigator.platform,
 		maxTouches: window.navigator.maxTouchPoints,
 		plugins: window.navigator.plugins,
 		online: window.navigator.onLine,
 		cookieEnabled: window.navigator.cookieEnabled,
+
+		// printing results into console log
+		log: function( log ) {
+			console.log(log);
+		},
 
 			
 

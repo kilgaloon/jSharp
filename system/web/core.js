@@ -79,9 +79,7 @@ core = {
 
 					document.getElementsByTagName("head")[0].appendChild(include);
 						
-					include.onload = function() {
-						foo(window.jsharp);
-					}
+					include.onload = function() { foo(window.jsharp); }
 
 				} else {
 
