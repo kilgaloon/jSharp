@@ -10,6 +10,10 @@ if(window.jsharp.isLoaded) {
 			return vars[get_var];
 		},
 
+		go: function( url ) {
+			window.location.href = url;
+		}
+
 	}
 
 

@@ -2,7 +2,7 @@
 	// cont()
 	// Description:
 	// Collecting all inside html content from given object
-	plug.cont = function( content ) {
+	plug.content = function( content ) {
 		 // checks to see is object undefinded
 		if(typeof(content) === "undefined") {
 			// if there is array of objects it loops and set their values
@@ -39,7 +39,7 @@
 	// attr();
 	// Description:
 	// Collecting choosen attributes
-	plug.attr = function( attr , value  ) { 
+	plug.attr = function( attr, value  ) { 
 		// checking for argument value, if is undefined then users checking initial 
 		// value of some object attribute
 		if(typeof value == "undefined") {
@@ -66,6 +66,33 @@
 			}
 		}
 
+	}
+
+
+	plug.data = function( attr, value ) {
+		if(typeof value == "undefined") {
+			if(object_in_buffer.length > 1) {
+				for(i = 0; i < object_in_buffer.length; i++) {
+					return object_in_buffer[i].getAttribute("data-" + attr);
+				}
+		
+			} else {
+				return object_in_buffer.getAttribute("data-" + attr);
+
+			}
+		// if value argument has some value in it then we want to 
+		// set some attribute to optional value
+		} else {
+			if(object_in_buffer.length > 1) {
+				for(i = 0; i < object_in_buffer.length; i++) {
+					object_in_buffer[i].setAttribute("data-" + attr, value);
+				}
+		
+			} else {
+				object_in_buffer.setAttribute("data-" + attr, value);
+
+			}
+		}
 	}
 
 
