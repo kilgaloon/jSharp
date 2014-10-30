@@ -39,13 +39,29 @@ if(window.jsharp.isLoaded) {
 		cookieEnabled: window.navigator.cookieEnabled,
 
 		// printing results into console log
-		log: function( log ) {
-			console.log(log);
+		log: function( log, name, store ) {
+			if(typeof store == "undefined") {
+				console.log(log);
+			} else if(store == true) {
+				time = new Date();
+
+				localStorage.setItem(name, JSON.stringify({time: time, log: log}));
+				console.log(log + " - *log stored");
+			}
+			
+		
 		},
 
+		getLog: function( name ) {
+			return JSON.parse(localStorage.getItem( name ));
+		},
+
+		deleteLog: function( name ) {
+			localStorage.removeItem(name);
+		},
 			
 
-		}
+	}
 
 
 // define global var, function or object
