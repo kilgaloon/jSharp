@@ -10,7 +10,7 @@ select = function( element ) {
 		return new init( element );
 
 	} else {
-		throw new Error("Ravel encountered some error!");
+		throw new Error("jSharp encountered some error!");
 	}
 
 

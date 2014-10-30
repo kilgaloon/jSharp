@@ -3,47 +3,45 @@
 if(window.jsharp.isLoaded) {
 
 	sys = {
-
 		// detecting which one browser user is using
-			browser: {
-				name: function() {
-					user_agent = window;
+		browser: {
+			name: function() {
+				user_agent = window;
 
-					if(typeof user_agent.msAnimationStartTime != "undefined") {
-						return "Internet Explorer";
-					} else if(user_agent.navigator.vendor.indexOf("Google")  >= 0) {
-						return "Google Chrome";
-					} else if(user_agent.navigator.vendor.indexOf("Opera") >= 0) {
-						return "Opera";
-					} else if(user_agent.navigator.mozId != "") { 
-						return "Mozzila Firefox";
-					} 
+				if(typeof user_agent.msAnimationStartTime != "undefined") {
+					return "Internet Explorer";
+				} else if(user_agent.navigator.vendor.indexOf("Google")  >= 0) {
+					return "Google Chrome";
+				} else if(user_agent.navigator.vendor.indexOf("Opera") >= 0) {
+					return "Opera";
+				} else if(user_agent.navigator.mozId != "") { 
+					return "Mozzila Firefox";
+				} 
 
-				},
 			},
+		},
+		
+		server: {
+			host: window.location.host,
+			hostname: window.location.hostname,
+			url: window.location.href,
+			origin: window.location.origin,
+			path: window.location.pathname,
+			port: window.location.port,
+			protocol: window.location.protocol,
+		},			
 
-			
-			server: {
-				host: window.location.host,
-				hostname: window.location.hostname,
-				url: window.location.href,
-				origin: window.location.origin,
-				path: window.location.pathname,
-				port: window.location.port,
-				protocol: window.location.protocol,
-			},			
+		// printing results into console log
+		log: function( log ) {
+			console.log(log);
+		},
 
-			// printing results into console log
-			log: function( log ) {
-				console.log(log);
-			},
-
-			lang: window.navigator.language,
-			os: window.navigator.platform,
-			maxTouches: window.navigator.maxTouchPoints,
-			plugins: window.navigator.plugins,
-			online: window.navigator.onLine,
-			cookieEnabled: window.navigator.cookieEnabled,
+		lang: window.navigator.language,
+		os: window.navigator.platform,
+		maxTouches: window.navigator.maxTouchPoints,
+		plugins: window.navigator.plugins,
+		online: window.navigator.onLine,
+		cookieEnabled: window.navigator.cookieEnabled,
 
 			
 
@@ -72,7 +70,7 @@ info = window.jsharp;
 
 
 } else {
-	throw new Error("Ravel is not loaded!");
+	throw new Error("jSharp is not loaded!");
 }
 
 
