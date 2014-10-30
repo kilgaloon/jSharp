@@ -37,7 +37,7 @@ var init = function( element ) {
  		} else if (object_to_check.length == 1) {
  			object_in_buffer = document.querySelector(this.element);
  		} else {
- 			throw new SyntaxError("Invalid selection!");
+ 			throw new SyntaxError("Invalid selection or object does not exist!");
  		}
 
 
@@ -46,7 +46,13 @@ var init = function( element ) {
 
 	}
 	
-}; jsharp = init; window.jsharp = { isLoaded: true, version: 0.5 }; 
+}; jsharp = init; 
+
+
+window.jsharp = { 
+	isLoaded: true, 
+	version: 0.5, 
+}; 
 
 
 
@@ -74,7 +80,7 @@ core = {
 					document.getElementsByTagName("head")[0].appendChild(include);
 						
 					include.onload = function() {
-						foo();
+						foo(window.jsharp);
 					}
 
 				} else {
@@ -94,17 +100,7 @@ core = {
 						
 					}
 
-					include.onload = function() {
-
-						try {
-							foo();
-						}
-
-						catch (err) {
-							throw new SyntaxError("Ravel encountered some error!");
-						}
-		
-					}
+					include.onload = function() { foo(window.jsharp); }
 
 				}
 					
