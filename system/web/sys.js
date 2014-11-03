@@ -66,12 +66,12 @@ if(window.jsharp.isLoaded) {
 
 // define global var, function or object
 function define( var_name, var_content ) {
-	window.Ravel.defined.push([var_name, var_content]);
+	window.jsharp.defined.push([var_name, var_content]);
 }
 
 // call defined global var, function or object	
 function pull( var_name ) {
-	defined = window.Ravel.defined;
+	defined = window.jsharp.defined;
 
 	for(var i = 0; i < defined.length; i++) {
    		if(defined[i][0] === var_name) {
@@ -81,7 +81,7 @@ function pull( var_name ) {
 }
 
 
-// store all ravel informations in " info " variable
+// store all j# informations in " info " variable
 info = window.jsharp;
 
 

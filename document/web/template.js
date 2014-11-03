@@ -2,7 +2,7 @@
 var template = [];
 
 // template object
-if(window.jsharp.isLoaded) {
+core.packageReady();
 
 
 	var _TEMPLATE = function( url ) {
@@ -46,5 +46,3 @@ if(window.jsharp.isLoaded) {
 
 
 
-
-}

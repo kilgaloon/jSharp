@@ -1,6 +1,5 @@
 	// url object
-
-if(window.jsharp.isLoaded) {
+core.packageReady();
 
 	_url = {
 		get: function( get_var ) {
@@ -17,4 +16,4 @@ if(window.jsharp.isLoaded) {
 	}
 
 
-}
+

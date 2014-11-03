@@ -105,6 +105,10 @@ core = {
 			}
 
 		};
+	},
+
+	packageReady: function() {
+		if(!window.jsharp.isLoaded) return false;
 	}
 
 }
