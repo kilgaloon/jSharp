@@ -1,7 +1,10 @@
 jSharp
 ======
 
-jSharp is sword for javascript ninjas
+jSharp is sword for javascript ninjas.
+What is even better, it works with frameworks you allready know.
+
+Be real ninja.
 
 Architecture
 -------------------------------------------------------------------------
