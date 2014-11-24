@@ -6,21 +6,6 @@ What is even better, it works with frameworks you allready know.
 
 Be real ninja.
 
-Architecture
--------------------------------------------------------------------------
-
--> document		
---> web		
----> dom.js		
----> event.js		
-	
--> system	
---> web		
----> core.js	
----> sys.js	
- 	
--> lib // folder for other libraries and custom codes
-
 -------------------------------------------------------------------------
 HTML
 -------------------------------------------------------------------------
