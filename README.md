@@ -14,9 +14,7 @@ Architecture
 ---> dom.js		
 ---> event.js
 ---> http.js
-
 ---> template.js
-
 ---> url.js
 
 	
