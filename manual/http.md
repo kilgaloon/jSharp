@@ -2,7 +2,7 @@ AJAX FUNCTION EXAMPLE AND EXAMPLANATION
 
 
 data - can be undefined as set to default value or can be object as in example under
-	   data: {id: 15, name: "John"}
+	`data: {id: 15, name: "John"}`
 
 type - can be either POST or GET, default is GET
 	   type: "GET"
