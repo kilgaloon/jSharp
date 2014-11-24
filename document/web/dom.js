@@ -156,22 +156,6 @@
 	}
 
 
-
-	// ATTRIBUTES
-
-
-	// drag();
-	//	Description:
-	// allowing to drag selected object
-	plug.drag = function( value ) {	
-		this.attr("draggable", value);
-
-		return true;
-	}
-
-
-// { 
-
 	// disable element
 	plug.disable = function( value ) {
 		this.attr("disabled", value);
