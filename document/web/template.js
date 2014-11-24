@@ -28,7 +28,7 @@ core.packageReady();
 			
 				} else {
 
-					ajax.open("GET", "document/web/template/" + this.url, false);
+					ajax.open("GET", this.url, false);
 					ajax.setRequestHeader("Content-Type", "text/html; charset=UTF-8");
 					ajax.send();
 					ajax_response = ajax.responseText;
