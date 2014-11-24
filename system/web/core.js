@@ -5,7 +5,6 @@ select = function( element ) {
 
 	// initialize ravel
 	if(window.jsharp.isLoaded) {
-		console.log("Processing..."); 
 
 		return new init( element );
 

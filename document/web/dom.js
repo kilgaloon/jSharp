@@ -68,6 +68,11 @@
 
 	}
 
+	// returns value of element
+	plug.value = function() {
+		return object_in_buffer.value;
+	}
+
 
 	plug.data = function( attr, value ) {
 		if(typeof value == "undefined") {
