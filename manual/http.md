@@ -3,15 +3,15 @@ AJAX FUNCTION EXAMPLE AND EXAMPLANATION
 
 data - can be undefined as set to default value or can be object as in example under 
 
-	`data: {id: 15, name: "John"}`
+	data: {id: 15, name: "John"}
 
 type - can be either POST or GET, default is GET
 
-	`type: "GET"`
+	type: "GET"
 
 url - url must be set to target your file where you sending request
 
-	`url: "test.php"`
+	url: "test.php"
 
 async - can be either TRUE or FALSE, default is false
 
