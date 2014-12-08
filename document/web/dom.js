@@ -114,7 +114,11 @@
 		}
 	}
 
+/* 
+	
+	CLASS METHODS
 
+*/
 	// adding class to existing element
 	plug.addClass = function( value ) {
 		classAttr = this.attr("class"); // store current class
@@ -127,7 +131,7 @@
 	}
 
 	// remove all classes on given object
-	plug.removeAllClasses = function() {
+	plug.rmClasses = function() {
 		this.attr("class", "");
 	}
 
@@ -144,6 +148,13 @@
 		this.addClass(joinClasses); // store all classes to given object
 
 	}
+
+
+/* 
+	
+	CLASS METHODS
+
+*/
 
 
 	// has();

@@ -18,8 +18,8 @@ _http = function( object ) {
 	dataType 	=	object.dataType || "text/html";
 	charset		= 	object.charset || "UTF-8";
 
-	callBackSuccess 	= 	object.success || this.success;
-	callBackError		=	object.error   || this.error;
+	callBackSuccess 	= 	object.success;
+	callBackError		=	object.error;
 
 
 	if (window.XMLHttpRequest) { ajax = new XMLHttpRequest() }
