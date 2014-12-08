@@ -1,0 +1,16 @@
+header {
+	background-color: #000;
+}
+
+
+.box {
+	position: absolute;
+	left: 50%;
+	margin-left: -100px;
+	width: 200px;
+	top: 100px;
+	background-color: red;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+}
