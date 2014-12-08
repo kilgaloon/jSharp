@@ -143,7 +143,7 @@
 		classesAttr.splice(classToRmv); // removes class from array
 
 		joinClasses = classesAttr.join(" "); // convert array to string
-		this.removeAllClasses(); // remove all classes on given object
+		this.rmClasses(); // remove all classes on given object
 
 		this.addClass(joinClasses); // store all classes to given object
 
