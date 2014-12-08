@@ -50,7 +50,7 @@ var init = function( element ) {
 
 window.jsharp = { 
 	isLoaded: true, 
-	version: 0.5,
+	version: 0.7.0,
 }; 
 
 
