@@ -1,11 +1,11 @@
-
+// predefined template array
 var template = [];
 
 // template object
 core.packageReady();
 
 
-	var _TEMPLATE = function( url ) {
+	var _template = function( url ) {
 
 			this.url = url;
 

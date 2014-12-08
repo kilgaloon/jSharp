@@ -1,5 +1,3 @@
-
-
 select = function( element ) {
 
 
@@ -45,7 +43,7 @@ var init = function( element ) {
 
 	}
 	
-}; jsharp = init; 
+};
 
 
 window.jsharp = { 
@@ -106,6 +104,82 @@ core = {
 		};
 	},
 
+	jsRequire: function( name ) {
+
+		if(typeof name != "object") {
+					include = document.createElement("script");
+					include.type = "text/javascript";
+
+					var find = ' ';
+					var re = new RegExp(find, 'g');
+
+					include.src = name.replace(re, "/") + ".js";
+
+					include.async = false;
+
+					document.getElementsByTagName("head")[0].appendChild(include);
+					
+
+				} else {
+
+					for(var i = 0; i < name.length; i++) {
+						include = document.createElement("script");
+						include.type = "text/javascript";
+
+						var find = ' ';
+						var re = new RegExp(find, 'g');
+
+						include.src = name[i].replace(re, "/") + ".js";
+
+						include.async = false;
+
+						document.getElementsByTagName("head")[0].appendChild(include)[0];
+						
+					}
+
+				
+
+				}
+
+	},
+
+	cssRequire: function( name ) {
+
+		if(typeof name != "object") {
+					include = document.createElement("link");
+					include.rel = "stylesheet";
+					include.type = "text/css";
+
+					var find = ' ';
+					var re = new RegExp(find, 'g');
+
+					include.href = name.replace(re, "/") + ".css";
+
+					document.getElementsByTagName("head")[0].appendChild(include);
+					
+
+				} else {
+
+					for(var i = 0; i < name.length; i++) {
+						include = document.createElement("link");
+						include.rel = "stylesheet";
+						include.type = "text/css";
+
+						var find = ' ';
+						var re = new RegExp(find, 'g');
+
+						include.href = name[i].replace(re, "/") + ".css";
+
+						document.getElementsByTagName("head")[0].appendChild(include)[0];
+						
+					}
+
+				
+
+				}
+
+	},
+
 	packageReady: function() {
 		if(!window.jsharp.isLoaded) return false;
 	}
@@ -115,7 +189,6 @@ core = {
 
 // variables
 var document = window.document,
-
 
 	// plugin call
 	plug = jsharp.prototype || init.prototype;

@@ -1,5 +1,5 @@
 
-	// cont()
+	// content()
 	// Description:
 	// Collecting all inside html content from given object
 	plug.content = function( content ) {
@@ -33,7 +33,37 @@
 
 		}
 		// end of function
-	}	
+	}
+
+
+
+	/*	
+
+	<!-- preappend -->
+	<div>
+	<!-- prepend -->
+	foo
+	<!-- append -->
+	</div>
+	<!-- apprend -->
+
+	*/
+
+	plug.preappend = function( html ) {
+		object_in_buffer.insertAdjacentHTML("beforebegin", html);
+	}
+
+	plug.prepend = function( html ) {
+		object_in_buffer.insertAdjacentHTML("afterbegin", html);
+	}
+
+	plug.append = function( html ) {
+		object_in_buffer.insertAdjacentHTML("beforeend", html);
+	}
+
+	plug.apprend = function( html ) {
+		object_in_buffer.insertAdjacentHTML("afterend", html);
+	}
 
 
 	// attr();
@@ -73,7 +103,7 @@
 		return object_in_buffer.value;
 	}
 
-
+	// 
 	plug.data = function( attr, value ) {
 		if(typeof value == "undefined") {
 			if(object_in_buffer.length > 1) {
@@ -155,7 +185,6 @@
 	CLASS METHODS
 
 */
-
 
 	// has();
 	// Description:
@@ -251,5 +280,5 @@
 
     // sets template on selected object
 	plug.setTemplate = function( page ) {
-		this.cont( template[page] );
+		this.content( template[page] );
 	}

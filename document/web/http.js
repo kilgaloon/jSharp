@@ -1,5 +1,4 @@
 // ajax object
-
 core.packageReady();
 // data
 // type
@@ -41,7 +40,6 @@ _http = function( object ) {
 		ajax.send(null);
 		responseText = ajax.responseText;
 
-
 	}
 			
 
@@ -60,7 +58,6 @@ _http = function( object ) {
 	}
 	
 }
-
 
 
 
