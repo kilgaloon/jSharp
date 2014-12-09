@@ -21,26 +21,48 @@ core.packageReady();
 					ajax.open("GET", this.url + "?" + param, false);
 					ajax.setRequestHeader("Content-Type", "text/html; charset=UTF-8");
 					ajax.send(null);
-					ajax_response = ajax.responseText;
-
-					return ajax_response;
-
 			
 				} else {
 
 					ajax.open("GET", this.url, false);
 					ajax.setRequestHeader("Content-Type", "text/html; charset=UTF-8");
 					ajax.send();
-					ajax_response = ajax.responseText;
 
-					return ajax_response;
+				}	
 
-				}		
 
+				return ajax.responseText;
+
+
+			},
+
+			this.puts = function( object ) {
+
+				if (window.XMLHttpRequest) { ajax = new XMLHttpRequest() }
+
+				ajax.open("GET", this.url, false);
+				ajax.setRequestHeader("Content-Type", "text/html; charset=UTF-8");
+				ajax.send();
+
+				var content = ajax.responseText;
+
+				for (var key in object) {
+					if (object.hasOwnProperty(key)) {  	
+
+						var find = '{{' + key + '}}';
+						var re = new RegExp(find, 'g');
+						
+
+						content = content.replace(re, object[key]);
+					}
+
+				}
+
+				return content;
+				
 			}
 
-
-			return this;
+			
 
 	}
 

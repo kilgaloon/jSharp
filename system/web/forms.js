@@ -5,24 +5,15 @@ core.cssRequire("template ui forms");
 
 
 		this.alertBox = function( message ) { 
-			box = new _template("template/ui/forms/alertBox.html").load();
+			box = new _template("template/ui/forms/alertBox.html");
+			content = 	box.puts({
+							message: message,
+							button: "Ok",
+						});
 
-			select("body").append(box);
-			select(".box .text").content(message);
+			select("body").append(content);
+
 		}
-
-		this.messageBox = function( message ) { 
-			box = new _template("template/ui/forms/messageBox.html").load();
-
-			select("body").append(box);
-			select(".box").content(message);
-		}
-
-		this.questionBox = function( message ) {
-			box = new _template("template/ui/forms/questionBox.html").load();
-
-			select("body").append(box);
-			select(".box .text").content(message);
-		}
+		
 		
 	}
