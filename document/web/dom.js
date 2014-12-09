@@ -99,8 +99,12 @@
 	}
 
 	// returns value of element
-	plug.value = function() {
-		return object_in_buffer.value;
+	plug.value = function( value ) {
+		if(typeof(value) == "undefined") {
+			return object_in_buffer.value;
+		} else {
+			object_in_buffer.value = value;
+		}
 	}
 
 	// changing data attributes
