@@ -39,17 +39,17 @@
 
 	/*	
 
-	<!-- preappend -->
+	<!-- prependTo -->
 	<div>
 	<!-- prepend -->
 	foo
 	<!-- append -->
 	</div>
-	<!-- apprend -->
+	<!-- appendTo -->
 
 	*/
 
-	plug.preappend = function( html ) {
+	plug.prependTo = function( html ) {
 		object_in_buffer.insertAdjacentHTML("beforebegin", html);
 	}
 
@@ -61,7 +61,7 @@
 		object_in_buffer.insertAdjacentHTML("beforeend", html);
 	}
 
-	plug.apprend = function( html ) {
+	plug.appendTo = function( html ) {
 		object_in_buffer.insertAdjacentHTML("afterend", html);
 	}
 
@@ -103,7 +103,7 @@
 		return object_in_buffer.value;
 	}
 
-	// 
+	// changing data attributes
 	plug.data = function( attr, value ) {
 		if(typeof value == "undefined") {
 			if(object_in_buffer.length > 1) {
