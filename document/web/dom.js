@@ -281,8 +281,3 @@
     	
     	return link;
     }
-
-    // sets template on selected object
-	plug.setTemplate = function( page ) {
-		this.content( template[page] );
-	}
