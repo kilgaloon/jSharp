@@ -6,6 +6,7 @@ core.using([
 		"document web http",
 
 		"system web forms",
+		"system web sys",
 
 	], function() {
 
