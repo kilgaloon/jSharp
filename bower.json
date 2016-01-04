@@ -1,0 +1,28 @@
+{
+  "name": "jSharp",
+  "homepage": "https://github.com/Kilgaloon/jSharp",
+  "authors": [
+    "strahinja <radju22@gmail.com>"
+  ],
+  "description": "Javascript framework",
+  "main": "",
+  "moduleType": [
+    "AMD"
+  ],
+  "keywords": [
+    "framework",
+    "custom",
+    "packages",
+    "vanilla",
+    "javascript"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
